@@ -2,67 +2,30 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-03T17:44:27 IST" name="Suite" finished-at="2023-07-03T17:44:44 IST" duration-ms="16427">
+  <suite started-at="2023-07-26T16:18:25 IST" name="Default suite" finished-at="2023-07-26T16:18:37 IST" duration-ms="12218">
     <groups>
     </groups>
-    <test started-at="2023-07-03T17:44:27 IST" name="Test" finished-at="2023-07-03T17:44:44 IST" duration-ms="16427">
-      <class name="interviewPrep.Demotestng">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:interviewPrep.Demotestng@794cb805]" started-at="2023-07-03T17:44:27 IST" name="setUp" finished-at="2023-07-03T17:44:37 IST" duration-ms="10088" status="PASS">
+    <test started-at="2023-07-26T16:18:25 IST" name="Default test" finished-at="2023-07-26T16:18:37 IST" duration-ms="12218">
+      <class name="interviewPrepJava.PracticingEverything">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:interviewPrepJava.PracticingEverything@1f0f1111]" started-at="2023-07-26T16:18:25 IST" name="setUp" finished-at="2023-07-26T16:18:37 IST" duration-ms="11943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:interviewPrep.Demotestng@794cb805]" started-at="2023-07-03T17:44:37 IST" name="setUp" finished-at="2023-07-03T17:44:44 IST" duration-ms="6199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="search(java.lang.String)[pri:0, instance:interviewPrep.Demotestng@794cb805]" started-at="2023-07-03T17:44:44 IST" name="search" finished-at="2023-07-03T17:44:44 IST" duration-ms="81" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Selenium]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:0, instance:interviewPrepJava.PracticingEverything@1f0f1111]" started-at="2023-07-26T16:18:37 IST" name="LoginTest" finished-at="2023-07-26T16:18:37 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Element <div class="a4bIc"> is not reachable by keyboard
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4.1', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [f0ed7259-6946-4f64-b58a-b90e3bc1865a, sendKeysToElement {id=8db9624d-c755-4bb0-a753-1693c694587c, value=[Ljava.lang.CharSequence;@205bed61}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0, moz:accessibilityChecks: false, moz:buildID: 20230601151220, moz:debuggerAddress: 127.0.0.1:18530, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 22.5.0, moz:processID: 9513, moz:profile: /var/folders/w9/37hb8zlj6gl..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:18530/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on mac (f0ed7259-6946-4f64-b58a-b90e3bc1865a)] -> xpath: //div[@class='a4bIc']]
-Session ID: f0ed7259-6946-4f64-b58a-b90e3bc1865a]]>
+              <![CDATA[
+Method public void interviewPrepJava.PracticingEverything.LoginTest(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : logindata]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <div class="a4bIc"> is not reachable by keyboard
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.4.1', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [f0ed7259-6946-4f64-b58a-b90e3bc1865a, sendKeysToElement {id=8db9624d-c755-4bb0-a753-1693c694587c, value=[Ljava.lang.CharSequence;@205bed61}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0, moz:accessibilityChecks: false, moz:buildID: 20230601151220, moz:debuggerAddress: 127.0.0.1:18530, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 22.5.0, moz:processID: 9513, moz:profile: /var/folders/w9/37hb8zlj6gl..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:18530/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on mac (f0ed7259-6946-4f64-b58a-b90e3bc1865a)] -> xpath: //div[@class='a4bIc']]
-Session ID: f0ed7259-6946-4f64-b58a-b90e3bc1865a
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
-at interviewPrep.Demotestng.search(Demotestng.java:32)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+              <![CDATA[org.testng.TestNGException: 
+Method public void interviewPrepJava.PracticingEverything.LoginTest(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : logindata
+at org.testng.internal.Parameters.findDataProvider(Parameters.java:561)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:772)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -84,11 +47,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-      </class> <!-- interviewPrep.Demotestng -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:interviewPrepJava.PracticingEverything@1f0f1111]" started-at="2023-07-26T16:18:37 IST" name="tearDown" finished-at="2023-07-26T16:18:37 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- interviewPrepJava.PracticingEverything -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

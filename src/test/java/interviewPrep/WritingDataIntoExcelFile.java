@@ -16,19 +16,19 @@ public class WritingDataIntoExcelFile {
 	{
 		String data;
 		Scanner s  = new Scanner(System.in);
-		FileOutputStream fout = new FileOutputStream("/Users/anwaya/eclipse-workspace/SeleniumBasics/testdata/countries.xlsx");
+		FileOutputStream fout = new FileOutputStream("/Users/anwaya/eclipse-workspace/SeleniumBasics/testdata/cnt.xlsx");
 		
 		XSSFWorkbook workbook = new XSSFWorkbook();
-		XSSFSheet sheet = workbook.createSheet("login");
+		XSSFSheet sheet = workbook.createSheet("data");
 		
-		for(int i =0;i<4;i++)
+		for(int i=0;i<5;i++)
 		{
 			XSSFRow row = sheet.createRow(i);
-			for(int j=0;j<3;j++)
+			for(int j=0;j<1;j++)
 			{
-				System.out.println("Enter data: ");
-				data = s.next();
 				XSSFCell cell = row.createCell(j);
+				System.out.println("Enter data");
+				data = s.nextLine();
 				cell.setCellValue(data);
 			}
 		}
