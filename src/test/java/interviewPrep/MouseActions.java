@@ -22,9 +22,9 @@ public class MouseActions {
 		act.clickAndHold(src).moveToElement(trg).release().build().perform();
 		//act.dragAndDrop(src, trg).perform();
 		
+		
 		Thread.sleep(3000);
 
-		
 		driver.close();
 		
 	}

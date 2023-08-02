@@ -1,5 +1,7 @@
 package interviewPrep;
 
+import java.sql.Connection;
+import java.sql.Statement;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -27,6 +29,12 @@ public class JDBCDemo {
 		driver.findElement(By.xpath("//input[@name='agree']")).click();
 		
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
+		/*
+		Connection con =  WebDriverManager.getConnection("Connection string");
+		
+		Statement stmt = con.createStatement();
+		ResultSet rs = stmt.executeQuery("Select * from students");
+		*/
 		
 	}
 

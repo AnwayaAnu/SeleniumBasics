@@ -27,24 +27,21 @@ public class DownloadinFile {
 		options.setExperimentalOption("prefs", preferences);
 		*/
 		
-		FirefoxProfile profile = new FirefoxProfile();
-		profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/msword");
-		profile.setPreference("browser.download.folderList",0); //0 - save to desktop, 1- save to download , 2 - save to preferred location
-		//profile.setPreference("browser.download.dir", loc);
+		HashMap preference = new HashMap();
 		
-		FirefoxOptions options = new FirefoxOptions();
-		options.setProfile(profile);
+		preference.put("download.default_directpry", loc);
 		
-		WebDriver driver = new FirefoxDriver(options);
-		driver.get("https://file-examples.com/index.php/sample-documents-download/");
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("prefs", preference);
+	
+		WebDriver driver = new ChromeDriver(options);
+		driver.get("https://demo.automationtesting.in/FileDownload.html");
 		driver.manage().window().maximize();
-		WebElement downld = driver.findElement(By.xpath("//a[@href='https://file-examples.com/index.php/sample-documents-download/sample-doc-download/']"));
-
+		
+		driver.findElement(By.xpath("//a[@type='button']")).click();
+		
+		
 		Thread.sleep(3000);
-		
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", downld);
-		
 		driver.close();
 	}
 
