@@ -1,31 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-26T16:18:25 IST" name="Default suite" finished-at="2023-07-26T16:18:37 IST" duration-ms="12218">
+  <suite started-at="2024-09-14T11:28:09 IST" name="Suite" finished-at="2024-09-14T11:28:34 IST" duration-ms="25209">
     <groups>
     </groups>
-    <test started-at="2023-07-26T16:18:25 IST" name="Default test" finished-at="2023-07-26T16:18:37 IST" duration-ms="12218">
-      <class name="interviewPrepJava.PracticingEverything">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:interviewPrepJava.PracticingEverything@1f0f1111]" started-at="2023-07-26T16:18:25 IST" name="setUp" finished-at="2023-07-26T16:18:37 IST" duration-ms="11943" status="PASS">
+    <test started-at="2024-09-14T11:28:09 IST" name="chromeTest" finished-at="2024-09-14T11:28:23 IST" duration-ms="14279">
+      <class name="PracticeProblems.DemoDataproviders">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:PracticeProblems.DemoDataproviders@56de5251]" started-at="2024-09-14T11:28:09 IST" name="setUp" finished-at="2024-09-14T11:28:19 IST" duration-ms="10484" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LoginTest(java.lang.String,java.lang.String)[pri:0, instance:interviewPrepJava.PracticingEverything@1f0f1111]" started-at="2023-07-26T16:18:37 IST" name="LoginTest" finished-at="2023-07-26T16:18:37 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        <test-method signature="Login(java.lang.String,java.lang.String)[pri:0, instance:PracticeProblems.DemoDataproviders@56de5251]" started-at="2024-09-14T11:28:19 IST" name="Login" data-provider="dp" finished-at="2024-09-14T11:28:23 IST" duration-ms="3526" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PracticeProblems.DemoDataproviders@56de5251]" started-at="2024-09-14T11:28:23 IST" name="tearDown" finished-at="2024-09-14T11:28:23 IST" duration-ms="223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- PracticeProblems.DemoDataproviders -->
+    </test> <!-- chromeTest -->
+    <test started-at="2024-09-14T11:28:23 IST" name="safariTest" finished-at="2024-09-14T11:28:23 IST" duration-ms="12">
+      <class name="PracticeProblems.DemoDataproviders">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:PracticeProblems.DemoDataproviders@2f7c2f4f]" started-at="2024-09-14T11:28:23 IST" name="setUp" finished-at="2024-09-14T11:28:23 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[safari]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Login(java.lang.String,java.lang.String)[pri:0, instance:PracticeProblems.DemoDataproviders@2f7c2f4f]" started-at="2024-09-14T11:28:23 IST" name="Login" data-provider="dp" finished-at="2024-09-14T11:28:23 IST" duration-ms="3" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[
-Method public void interviewPrepJava.PracticingEverything.LoginTest(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : logindata]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method public void interviewPrepJava.PracticingEverything.LoginTest(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : logindata
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:561)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:772)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+at PracticeProblems.DemoDataproviders.Login(DemoDataproviders.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -47,15 +101,202 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:interviewPrepJava.PracticingEverything@1f0f1111]" started-at="2023-07-26T16:18:37 IST" name="tearDown" finished-at="2023-07-26T16:18:37 IST" duration-ms="216" status="PASS">
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PracticeProblems.DemoDataproviders@2f7c2f4f]" started-at="2024-09-14T11:28:23 IST" name="tearDown" finished-at="2024-09-14T11:28:23 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+at PracticeProblems.DemoDataproviders.tearDown(DemoDataproviders.java:68)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- interviewPrepJava.PracticingEverything -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- PracticeProblems.DemoDataproviders -->
+    </test> <!-- safariTest -->
+    <test started-at="2024-09-14T11:28:23 IST" name="firefoxTest" finished-at="2024-09-14T11:28:34 IST" duration-ms="10868">
+      <class name="PracticeProblems.DemoDataproviders">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:PracticeProblems.DemoDataproviders@5be6e01c]" started-at="2024-09-14T11:28:23 IST" name="setUp" finished-at="2024-09-14T11:28:34 IST" duration-ms="10843" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Process unexpectedly closed with status 1 
+Host info: host: 'Anwayas-MacBook-Pro.local', ip: 'fe80:0:0:0:ce:28c0:6135:52d5%en0'
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.5', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {binary: /Applications/Firefox.app/C...}}]}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Process unexpectedly closed with status 1 
+Host info: host: 'Anwayas-MacBook-Pro.local', ip: 'fe80:0:0:0:ce:28c0:6135:52d5%en0'
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.5', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {binary: /Applications/Firefox.app/C...}}]}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:161)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:155)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:150)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:132)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:127)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:112)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:102)
+at PracticeProblems.DemoDataproviders.setUp(DemoDataproviders.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Login(java.lang.String,java.lang.String)[pri:0, instance:PracticeProblems.DemoDataproviders@5be6e01c]" started-at="2024-09-14T11:28:34 IST" name="Login" data-provider="dp" finished-at="2024-09-14T11:28:34 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Process unexpectedly closed with status 1 
+Host info: host: 'Anwayas-MacBook-Pro.local', ip: 'fe80:0:0:0:ce:28c0:6135:52d5%en0'
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.5', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {binary: /Applications/Firefox.app/C...}}]}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Process unexpectedly closed with status 1 
+Host info: host: 'Anwayas-MacBook-Pro.local', ip: 'fe80:0:0:0:ce:28c0:6135:52d5%en0'
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.5', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {binary: /Applications/Firefox.app/C...}}]}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:161)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:155)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:150)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:132)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:127)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:112)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:102)
+at PracticeProblems.DemoDataproviders.setUp(DemoDataproviders.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PracticeProblems.DemoDataproviders@5be6e01c]" started-at="2024-09-14T11:28:34 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1726293514344" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- PracticeProblems.DemoDataproviders -->
+    </test> <!-- firefoxTest -->
+  </suite> <!-- Suite -->
 </testng-results>

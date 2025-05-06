@@ -16,12 +16,12 @@ public class WritingDataIntoExcelFile {
 	{
 		String data;
 		Scanner s  = new Scanner(System.in);
-		FileOutputStream fout = new FileOutputStream("/Users/anwaya/eclipse-workspace/SeleniumBasics/testdata/Mysutra.xlsx");
+		FileOutputStream fout = new FileOutputStream("/Users/anwaya/eclipse-workspace/SeleniumBasics/testdata/CustomerTestCase.xlsx");
 		
 		XSSFWorkbook workbook = new XSSFWorkbook();
 		XSSFSheet sheet = workbook.createSheet("data");
 		
-		for(int i=0;i<4;i++)
+		for(int i=0;i<2;i++)
 		{
 			XSSFRow row = sheet.createRow(i);
 			for(int j=0;j<2;j++)

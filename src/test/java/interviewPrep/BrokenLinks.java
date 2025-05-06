@@ -10,57 +10,52 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrokenLinks {
 
 	public static void main(String[] args) throws IOException 
 	{
-		
-		
 		int count = 0;
 		WebDriver driver = new FirefoxDriver();
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		driver.get("https://demo.guru99.com/test/newtours/");
+		driver.get("https://www.google.com/");
+		
 		driver.manage().window().maximize();
 		
-		List<WebElement> links = driver.findElements(By.tagName("a"));
+		List<WebElement> tot_links = driver.findElements(By.tagName("a"));
 		
-		for(WebElement lnk:links)
+		for(WebElement lnks:tot_links)
 		{
-			String link_attr = lnk.getAttribute("href");
+			String link = lnks.getAttribute("href");
 			
-			if(link_attr==null || link_attr.isEmpty())
+			if(link.equals(null) || link.isEmpty())
 			{
-				System.out.println("Invalid urls");
-				continue;
+				System.out.println("Links are not present");
 			}
-			try
-			{
-			URL urls = new URL(link_attr);
+			
+			URL urls = new URL(link);
 			
 			HttpURLConnection hcon = (HttpURLConnection) urls.openConnection();
+			
 			hcon.connect();
 			
-			if(hcon.getResponseCode()>400)
+			if(hcon.getResponseCode()<400)
 			{
-				System.out.println("Broken URl");
-				count++;
+				System.out.println("Valid links");
 			}
 			else
 			{
-				System.out.println("valid URL");
+				System.out.println("Invalid links");
+				count++;		
 			}
-			
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-
 		}
-		System.out.println("total no of broken urls: "+count);
+		System.out.println("Total no. of invalid links:"+ "="+count);
+		
+		driver.quit();
 		
 	}
 
